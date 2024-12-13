@@ -88,18 +88,18 @@
     }
 
     .hero {
-      background: url('image.png') no-repeat center center / cover;
-      color: var(--dark-gray);
-      padding: 100px 50px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: left;
-    }
+  background: url('maroc7.png') no-repeat center center / cover;
+  color: var(--dark-gray);
+  padding: 100px 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: left;
+  background-position: center;
+}
 
     .hero-content {
       max-width: 600px;
-      
       padding: 30px;
       border-radius: 8px;
       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
@@ -115,9 +115,9 @@
     .hero p {
       font-size: 1rem;
       margin-bottom: 20px;
-      color:  #6d6054;
+      color: #6d6054;
       line-height: 1.6;
-      font-weight: bold; /* Texte en gras */
+      font-weight: bold;
     }
 
     .hero .btn-primary {
@@ -135,6 +135,25 @@
       background-color: var(--brown);
       color: var(--off-white);
       transform: translateY(-3px);
+    }
+
+    @media (max-width: 767px) {
+      .hero {
+        padding: 80px 20px; /* Réduit l'espace autour sur les petits écrans */
+      }
+
+      .hero h1 {
+        font-size: 1.8rem;
+      }
+
+      .hero p {
+        font-size: 0.9rem;
+      }
+
+      .hero-content {
+        padding: 20px;
+        max-width: 100%;
+      }
     }
 
 
@@ -230,53 +249,66 @@
     }
 
     footer {
-      background-color: var(--dark-gray);
-      color: var(--off-white);
-      text-align: center;
-      padding: 20px 0;
-    }
+  background-color: var(--dark-gray);
+  color: var(--off-white);
+  text-align: center;
+  padding: 20px 0;
+}
     .footer {
-      background-color: var(--light-gray); /* Couleur d'arrière-plan */
-      color: var(--dark-gray); /* Couleur du texte */
-      padding: 0.4px 0;
-      font-size: 0.9rem;
-    }
+          background-color: var(--light-gray); /* Couleur d'arrière-plan */
+          color: var(--dark-gray); /* Couleur du texte */
+          padding: 0.4px 0;
+          font-size: 0.9rem;
+        }
 
-    .footer-container {
+    .footer .footer-container {
       display: flex;
       justify-content: space-between;
       align-items: center;
       flex-wrap: wrap;
+      text-align: left; /* Pour le texte dans le footer */
     }
 
-    .footer-left {
+    .footer-left,
+    .footer-right {
       flex: 1;
     }
 
-    .footer-logo {
-      height: 230px;  /* Définissez la hauteur souhaitée pour le logo */
-      width: auto;    /* La largeur est ajustée proportionnellement */
-      object-fit: contain; /* Garde les proportions du logo sans le déformer */
+    .footer-left img {
+      max-height: 150px;
+      width: auto;
     }
 
     .footer-right {
-      flex: 3;
-      text-align: left;
-      line-height: 1.5;
+      flex: 2;
     }
 
     .footer-right a {
-      color: var(--brown); /* Couleur des liens */
+      color: var(--brown);
       text-decoration: none;
       font-weight: bold;
     }
 
     .footer-right a:hover {
-      color: var(--dark-gray); /* Couleur au survol */
-}
+      color: var(--dark-gray);
+    }
+
+    @media (max-width: 767px) {
+      .footer .footer-container {
+        flex-direction: column; /* Empile les éléments sur les petits écrans */
+        align-items: center;  /* Centrer les éléments */
+      }
+
+      .footer-left,
+      .footer-right {
+        flex: none;
+        width: 100%; /* Les éléments prennent toute la largeur */
+        text-align: center;
+      }
+    }
     .top-bar {
-      background-color: var(--off-white); /* Couleur de fond */
-      color: var(black); /* Couleur du texte */
+      background-color: var(--off-white); 
+      color: black; 
       padding: 10px 0;
       font-size: 0.9rem;
     }
@@ -285,14 +317,14 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      flex-wrap: wrap;
+      flex-wrap: wrap;  /* Permet aux éléments de se réorganiser sur des écrans plus petits */
     }
 
     .info-block {
       display: flex;
       align-items: center;
       gap: 10px;
-      flex: 1;
+      flex: 1; 
     }
 
     .info-block .icon {
@@ -300,7 +332,17 @@
       width: 24px;
     }
 
-    .btn-secondary {
+    @media (max-width: 767px) {
+      .top-bar .container {
+        flex-direction: column;  /* Empile les éléments sur les petits écrans */
+        align-items: flex-start; /* Aligne à gauche */
+      }
+
+      .info-block {
+        justify-content: flex-start; /* Assure que les infos soient bien alignées */
+      }
+    }
+        .btn-secondary {
       background-color: var(--beige); /* Couleur du bouton */
       color: var(--dark-gray);
       padding: 5px 10px;
@@ -428,7 +470,7 @@
   
 
   <!-- Hero Section -->
-<section class="hero" style="background-image: url('maroc6.png'); background-size: cover; background-position: center; background-repeat: no-repeat" data-aos="slide-up">
+<section class="hero" style="background-image: url('maroc7.png'); background-size: cover; background-position: center; background-repeat: no-repeat" data-aos="slide-up">
   <div class="container" data-aos="slide-up">
     <div class="hero-content"data-aos="slide-up">
       <h1>Bienvenue sur notre plateforme</h1>
