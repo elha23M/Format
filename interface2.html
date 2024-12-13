@@ -6,6 +6,8 @@
   <meta name="description" content="Plateforme pour visualisation et téléchargement de données au Maroc.">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  
+
   <title>Plateforme de Données Maroc</title>
   <style>
     
@@ -313,6 +315,133 @@
   color: var(--off-white);
   transform: translateY(-2px);
 }
+/* Styles pour les petits écrans (téléphones) */
+@media (max-width: 767px) {
+  header {
+    flex-direction: column; /* Empile le logo et la navigation */
+    text-align: center;
+  }
+
+  .logo img {
+    height: 100px; /* Ajustez la taille du logo */
+  }
+
+  .hero {
+    padding: 60px 20px; /* Moins de padding pour la section hero */
+    text-align: center;
+  }
+
+  .hero h1 {
+    font-size: 2rem; /* Taille de texte plus petite sur mobile */
+  }
+
+  .hero p {
+    font-size: 0.9rem;
+  }
+
+  nav ul {
+    flex-direction: column; /* Empile les liens de navigation */
+    gap: 10px;
+  }
+
+  .cards {
+    flex-direction: column; /* Empile les cartes verticalement */
+    align-items: center;
+  }
+
+  .card {
+    width: 100%; /* Cartes prennent toute la largeur sur mobile */
+    max-width: 350px; /* Limite la taille des cartes */
+    margin-bottom: 20px; /* Espacement entre les cartes */
+  }
+
+  .footer-container {
+    flex-direction: column; /* Empile les éléments du footer */
+    text-align: center;
+  }
+
+  .footer-logo {
+    height: 100px; /* Ajustez la taille du logo du footer */
+  }
+}
+
+/* Styles pour les tablettes */
+@media (max-width: 1024px) {
+  .hero {
+    padding: 80px 30px; /* Réduit un peu les padding */
+  }
+
+  .hero h1 {
+    font-size: 2.2rem;
+  }
+
+  .cards {
+    flex-wrap: wrap; /* Permet aux cartes de se répartir */
+    justify-content: space-between;
+  }
+}
+ /* Styles du menu hamburger */
+ .hamburger-menu {
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+  }
+
+  /* Styles du menu mobile */
+  #mobile-nav {
+    display: none;
+  }
+
+  #mobile-nav.visible {
+    display: block;
+  }
+
+  /* Styles pour les écrans mobiles */
+  @media (max-width: 767px) {
+    .hamburger-menu {
+      display: block; /* Affiche le bouton hamburger sur mobile */
+    }
+
+    nav ul {
+      flex-direction: column;
+      gap: 10px;
+      margin: 0;
+      padding: 0;
+    }
+
+    #mobile-nav ul {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      padding: 0;
+      list-style: none;
+    }
+
+    #mobile-nav ul li a {
+      padding: 10px;
+      background-color: var(--dark-gray);
+      color: var(--off-white);
+      text-decoration: none;
+      border: 1px solid var(--light-gray);
+    }
+
+    #mobile-nav ul li a:hover {
+      background-color: var(--beige);
+    }
+  }
+    header .logo img {
+    height: 100px;
+  }
+
+    .hero {
+      padding: 50px 20px;
+    }
+
+    .footer-logo {
+      height: 150px;
+    }
+
+
 
 
     
@@ -352,8 +481,16 @@
         <li><a href="#telechargements">Téléchargements</a></li>
         <li><a href="file:///C:/Users/Serab/Downloads/leaf/plateforme.html">Visualisation</a></li>
       </ul>
+      <div class="hamburger-menu" onclick="toggleMenu()">☰</div>
     </nav>
   </div>
+  <nav id="mobile-nav">
+    <ul>
+      <li><a href="#formats">Formats</a></li>
+      <li><a href="#telechargements">Téléchargements</a></li>
+      <li><a href="file:///C:/Users/Serab/Downloads/leaf/plateforme.html">Visualisation</a></li>
+    </ul>
+  </nav>
 </header>
 
   
